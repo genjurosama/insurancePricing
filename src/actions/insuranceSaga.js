@@ -17,7 +17,7 @@ import {
 
 
 /**
- * will return a promise for tasks fetch
+ * will return a promise for module fetch
  */
 export function fetchMdlApi(id): Promise {
   return axios.get(`http://localhost:9001/module/${id}`);
@@ -33,7 +33,7 @@ export function fetchMdlApi(id): Promise {
  }
 
 /**
- * Generator function used by triggered by TASKS_FETCH_REQUESTED action type
+ * Generator function used by triggered by MODULE_FETCH_REQUESTED action type
  */
 
 export function* fetchModule(action) {

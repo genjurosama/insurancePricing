@@ -1,5 +1,5 @@
 /**
- *This file will hold the tasks reducer to manage data fetching state
+ *This file will hold the moduler reducer to manage data fetching state
  */
 
 import {
@@ -21,7 +21,7 @@ const initialState = {
 };
 
 /**
- * Reducer for tasks operations
+ * Reducer for module operations
  * @param {Object} state
  * @param {Object} action
  * @returns {Object} as a new immutated state

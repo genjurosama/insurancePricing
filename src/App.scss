@@ -1,17 +1,3 @@
-$tableWidth: 200px;
-$colWidth:20%;
-$buttonMargin:5px;
-$textInputHeight:10%;
-table{
-    border: 1px solid black;
-    table-layout: fixed;
-    width: $tableWidth;
-}
-
-th, td {
-    width: $colWidth;
-}
-
 div.module{text-align: center;}
 div.contentDiv {
     margin-top: 100px

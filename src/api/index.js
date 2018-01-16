@@ -28,11 +28,11 @@ app.get("/modules", (req, res) => {
 });
 
 /**
- * Get /task/:id
+ * Get /module/:id
  *
  * id: Number
  *
- * Return the task for the given id.
+ * Return the module for the given id.
  *
  * If found return status code 200 and the resource.
  * If not found return status code 404.
