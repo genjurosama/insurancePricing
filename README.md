@@ -1,6 +1,6 @@
-# React-redux-todos
+# React-redux-Insurance
 
-This project is to test knowledge on react and redux.
+This project is to test knowledge on Js fullstack.
 
 ## Getting Started
 
