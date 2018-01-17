@@ -6,11 +6,9 @@ import {
   changeCoverage,
   requestcalculatePrice
 } from "../actions/modules";
-import Slider from "react-rangeslider";
+import '../App.scss'
 
-// To include the default styles
-import "react-rangeslider/lib/index.css";
-import { Button } from "react-bootstrap";
+
 
 class Module extends Component {
   constructor(props) {
@@ -49,7 +47,7 @@ class Module extends Component {
             coverage :{this.props.module.coverage}
           </div>
           <div className="col-md-6">
-            <button className="btn btn-submit calculateBtn" onClick={this.handleClick}>
+            <button className="btn btn-primary" onClick={this.handleClick}>
               Calculate
             </button>
           </div>

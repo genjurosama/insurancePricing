@@ -13,6 +13,7 @@
     "flow": "^0.2.3",
     "font-awesome": "^4.7.0",
     "immutable": "^3.8.2",
+    "ionicons": "^3.0.0",
     "jsdom": "^11.5.1",
     "lodash": "^4.17.4",
     "nodemon": "^1.12.2",

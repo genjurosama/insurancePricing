@@ -85,7 +85,7 @@ describe("module fetch, change and calculate end to end Tests", () => {
     mock
       .onPost("http://localhost:9001/calculatePrice")
       .reply(200, { price: module.coverage * module.risk });
-    wrapper.find(".calculateBtn").simulate("click");
+    wrapper.find("#calculateBtn").simulate("click");
     setTimeout(() => {
       wrapper.update();
       try {

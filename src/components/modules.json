@@ -1,0 +1,20 @@
+{
+  "modules": [
+    {
+      "id":1,
+      "name": "bike",
+      "minCoverage": 0,
+      "maxCoverage": 3000,
+      "risk": 0.3,
+      "coverage":0
+    },
+    {
+      "id":2,
+      "name": "jwellery",
+      "minCoverage": 100,
+      "maxCoverage": 10000,
+      "risk": 0.05,
+      "coverage": 0
+    }
+  ]
+}

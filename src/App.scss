@@ -1,9 +1,161 @@
-div.module{text-align: center;}
-div.contentDiv {
-    margin-top: 200px;
+
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+@import url('https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css');
+
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css');
+
+/* variables */
+$blue : #3E6A82;
+$yellow : #FAD052;
+$orange : #F96953;
+$green : #4ec58a;
+
+/* common */
+body{
+    margin: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
 }
 
-.btn-submit {
-    color: #fff;
-    background-color: #61c2a6;  
+h1, h2, h3{
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+h2.page-title{
+  font-size: 40px;
+  margin: 60px 0;
+}
+
+.jumbotron{
+  background: #f7f7f7;
+  padding: 150px 0 ;
+  text: center;
+  border: 10px solid #333;
+}
+
+.jumbotron h1, .jumbotron h3{
+  line-height: 140%;
+}
+
+.box{
+  text-align: center;
+  margin: 5px;
+}
+
+.box .box-header{
+  text-align: center;
+  padding: 50px 20px 0px 20px;
+  text-transform: uppercase;
+}
+
+.box .box-header i.icon{
+  font-size: 50px;
+  line-height: 100%;
+}
+
+.box .box-header h2{
+  font-size: 15px;
+}
+
+.box .box-header h2::after{
+  content: '';
+  width: 50px;
+  display: block;
+  margin: 25px auto;
+}
+
+.box .box-content {
+  padding: 20px 20px 30px 20px;
+  color: #222;
+}
+
+.box .box-content p{
+   color: #4C4C4C;
+   margin-bottom: 35px;
+}
+
+.box.blue .box-content a, .box .box-content a:active{
+  color: $blue;
+}
+
+/* Blue */
+.box.blue{
+  border: 1px solid $blue;
+  border-bottom: 6px solid $blue;
+}
+
+.box.blue .box-header{
+  color: $blue;
+}
+
+.box.blue .box-header h2::after{
+  border-bottom: 2px solid $blue;
+}
+
+.box.blue .box-content a, .box .box-content a:active{
+  color: $blue;
+}
+
+/* Yellow */
+.box.yellow{
+  border: 1px solid $yellow;
+  border-bottom: 6px solid $yellow;
+}
+
+.box.yellow .box-header{
+  color: $yellow;
+}
+
+.box.yellow .box-header h2::after{
+  border-bottom: 2px solid $yellow;
+}
+
+.box.yellow .box-content a, .box .box-content a:active{
+  color: $yellow;
+}
+
+/* Orange */
+.box.orange{
+  border: 1px solid $orange;
+  border-bottom: 6px solid $orange;
+}
+
+.box.orange .box-header{
+  color: $orange;
+}
+
+.box.orange .box-header h2::after{
+  border-bottom: 2px solid $orange;
+}
+
+.box.orange .box-content a, .box .box-content a:active{
+  color: $orange;
+}
+
+/* green */
+.box.green{
+  border: 1px solid $green;
+  border-bottom: 6px solid $green;
+}
+
+.box.green .box-header{
+  color: $green;
+}
+
+.box.green .box-header h2::after{
+  border-bottom: 2px solid $green;
+}
+
+.box.green .box-content a, .box .box-content a:active{
+  color: $green;
+}
+
+.btn.btn-primary{
+  color: #fff !important;
+  letter-spacing: 2px;
+  background: $green;  
 }
