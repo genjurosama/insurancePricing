@@ -1,13 +1,12 @@
 import React from "react";
 import { Provider } from "react-redux";
-import configureMockStore from "redux-mock-store";
 import MockAdapter from "axios-mock-adapter";
 import Enzyme, { mount, render } from "enzyme";
 import Module from "../containers/module";
 import createSagaMiddleware from "redux-saga";
 import axios from "axios";
 import Adapter from "enzyme-adapter-react-16";
-import { mySaga } from "../actions/insuranceSaga";
+import moduleSaga from "../actions/insuranceSaga";
 import { createStore, applyMiddleware } from "redux";
 import reducer from "../reducers";
 import { changeCoverage } from "../actions/modules";
@@ -43,7 +42,7 @@ describe("module fetch, change and calculate end to end Tests", () => {
 
   it("should fetch the Bike module from mocked endpoint and update smart component with the min and max", done => {
     const store = createStore(reducer, applyMiddleware(sagaMiddleware));
-    sagaMiddleware.run(mySaga);
+    sagaMiddleware.run(moduleSaga);
     const wrapper = mount(
       <Provider store={store}>
         <Module currentModule="1" />
@@ -70,7 +69,7 @@ describe("module fetch, change and calculate end to end Tests", () => {
 
   it("it should change coverage and call endpoint for price calculation", done => {
     const store = createStore(reducer, applyMiddleware(sagaMiddleware));
-    sagaMiddleware.run(mySaga);
+    sagaMiddleware.run(moduleSaga);
     const wrapper = mount(
       <Provider store={store}>
         <Module currentModule="1" />

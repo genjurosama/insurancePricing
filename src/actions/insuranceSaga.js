@@ -1,5 +1,4 @@
 /**
- * @flow
  * The main redux-sagas logic for Module  operations
  */
 
@@ -36,7 +35,6 @@ export function getCalculation(coverage, risk) {
 export function* fetchModule(action) {
   try {
     const response = yield call(fetchMdlApi, action.id);
-
     yield put({ type: MODULE_FETCH_SUCCEEDED, module: response.data.module });
   } catch (e) {
     yield put({ type: MODULE_FETCH_FAILED, message: e.message });
@@ -53,12 +51,12 @@ export function* calculatePrice(action) {
 }
 
 /**
- * will interscept ever action type dispatched by the store and fire the appropriate generator function
+ * will intercept ever action type dispatched by the store and fire the appropriate generator function
  */
 
-export function* mySaga() {
+function* moduleSaga() {
   yield takeEvery(MODULE_FETCH_REQUESTED, fetchModule);
   yield takeEvery(REQUEST_CALC_PRICE, calculatePrice);
 }
 
-export default mySaga;
+export default moduleSaga;

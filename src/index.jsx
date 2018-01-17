@@ -7,10 +7,9 @@ import { Provider } from 'react-redux'
 import { createStore, combineReducers, applyMiddleware } from 'redux'
 import createSagaMiddleware from 'redux-saga'
 import { createLogger } from 'redux-logger'
-import promise from 'redux-promise'
 import App from './app.jsx'
 import reducer from './reducers'
-import mySaga from './actions/insuranceSaga'
+import moduleSaga from './actions/insuranceSaga'
 
 
 
@@ -24,7 +23,7 @@ const store = createStore(
   applyMiddleware(logger,sagaMiddleware),
 )
 
-sagaMiddleware.run(mySaga)
+sagaMiddleware.run(moduleSaga)
 
 
 const wrapApp = (AppComponent, reduxStore) => (

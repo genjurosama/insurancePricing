@@ -1,3 +1,6 @@
+/**
+ * A few test for the saga generator
+ */
 import { fetchModule, fetchMdlApi } from "./insuranceSaga";
 import { call, put } from "redux-saga/effects";
 import { MODULE_FETCH_SUCCEEDED } from "./modules";

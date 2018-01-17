@@ -65,7 +65,7 @@ app.post("/calculatePrice", (req, res) => {
   const risk = Number(req.body.risk);
   const price = coverage * risk;
   return res.status(201).json({
-    price: price
+    price: price.toFixed(2)
   });
 });
 

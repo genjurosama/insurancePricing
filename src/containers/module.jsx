@@ -68,8 +68,8 @@ class Module extends Component {
               <div className="row">
                 <div className="col-md-12 text-center result">
                   <strong>
-                    {" "}
-                    Price: {this.props.price > 0 ? this.props.price : 0}{" "}
+                   
+                    Price: {this.props.price > 0 ? this.props.price : 0}
                   </strong>
                 </div>
               </div>
