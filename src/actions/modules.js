@@ -33,6 +33,7 @@ export const fetchModuleFailed = function(message) {
 
 
 export const changeCoverage = function(value) {
+  console.log('changing val:',value);
   return {
     type: MODULE_CHANGE_COVERAGE,
     value: value

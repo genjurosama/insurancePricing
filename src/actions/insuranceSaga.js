@@ -61,7 +61,7 @@ export function* calculatePrice(action) {
  * will interscept ever action type dispatched by the store and fire the appropriate generator function
  */
 
-function* mySaga() {
+export function* mySaga() {
   yield takeEvery(MODULE_FETCH_REQUESTED, fetchModule);
   yield takeEvery(REQUEST_CALC_PRICE, calculatePrice);
 }
