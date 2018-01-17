@@ -19,7 +19,7 @@ body{
     font-weight: 300;
 }
 
-h1, h2, h3{
+h1, h2, h3, h5{
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -30,9 +30,13 @@ h2.page-title{
   margin: 60px 0;
 }
 
+h5{
+  padding-bottom: 20px;
+ }
+
 .jumbotron{
   background: #f7f7f7;
-  padding: 150px 0 ;
+  padding: 100px 0 ;
   text: center;
   border: 10px solid #333;
 }
@@ -158,4 +162,10 @@ h2.page-title{
   color: #fff !important;
   letter-spacing: 2px;
   background: $green;  
+}
+
+.result {
+  margin: 20 0;
+  font-size: 25px;
+  text-transform: uppercase;
 }

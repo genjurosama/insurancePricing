@@ -6,9 +6,7 @@ import {
   changeCoverage,
   requestcalculatePrice
 } from "../actions/modules";
-import '../App.scss'
-
-
+import "../App.scss";
 
 class Module extends Component {
   constructor(props) {
@@ -16,9 +14,11 @@ class Module extends Component {
     this.handleClick = this.handleClick.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
+
   componentDidMount() {
     this.props.fetchModule(this.props.currentModule);
   }
+
   handleClick(e) {
     this.props.requestcalculatePrice(
       this.props.module.coverage,
@@ -32,29 +32,51 @@ class Module extends Component {
 
   render() {
     return (
-      <div class="contentDiv">
-        <div className="row">Please choose your coverage</div>
-        <div className="row">
-          <div className="col-md-6">
-            <input
-              id="coverageInput"
-              type="range"
-              onChange={this.handleChange}
-              step={10}
-              min={this.props.minCoverage}
-              max={this.props.module.maxCoverage}
-            />
-            coverage :{this.props.module.coverage}
-          </div>
-          <div className="col-md-6">
-            <button className="btn btn-primary" onClick={this.handleClick}>
-              Calculate
-            </button>
+      <div>
+        <div className="jumbotron text-center">
+          <div className="container">
+            <p>Simulate</p>
+            <h1 className="display-3">{this.props.module.name} Insurance</h1>
           </div>
         </div>
-        <div className="row">
-          <div className="col-md-6">
-            Price:<div className='price'>{this.props.price > 0 ? this.props.price : 0}</div>
+        <div className="container">
+          <div className="row">
+            <h5 className="text-center page-title">
+              Get Quote now!Please choose your coverage.
+            </h5>
+            <div className="col-md-6 col-md-offset-3">
+              <div className="col-md-9">
+                <input
+                  id="coverageInput"
+                  type="range"
+                  value={this.props.module.coverage}
+                  onChange={this.handleChange}
+                  step={10}
+                  min={this.props.module.minCoverage}
+                  max={this.props.module.maxCoverage}
+                />
+                coverage :{this.props.module.coverage >
+                this.props.module.minCoverage
+                  ? this.props.module.coverage
+                  : this.props.module.minCoverage}
+              </div>
+              <div className="col-md-3">
+                <button id="calculateBtn" className="btn btn-primary" onClick={this.handleClick}>
+                  Calculate
+                </button>
+              </div>
+              <div className="row">
+                <div className="col-md-12 text-center result">
+                  <strong>
+                    {" "}
+                    Price: {this.props.price > 0 ? this.props.price : 0}{" "}
+                  </strong>
+                </div>
+              </div>
+            </div>
+            <div className="row">
+              <div className="col-md-6" />
+            </div>
           </div>
         </div>
       </div>
@@ -69,7 +91,6 @@ class Module extends Component {
  */
 
 function mapStateToProps(state) {
-  console.log("new state:", state);
   return {
     module: state.moduleReducer.module,
     price: state.moduleReducer.price

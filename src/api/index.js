@@ -40,7 +40,7 @@ app.get("/modules", (req, res) => {
  */
 app.get("/module/:id", (req, res) => {
   const id = parseInt(req.params.id, 10);
-  console.log('id:',id);  
+
   if (!Number.isNaN(id)) {
     const module = modulesContainer.modules.find(item => item.id === id);
 
@@ -60,11 +60,7 @@ app.get("/module/:id", (req, res) => {
   }
 });
 
-
-
 app.post("/calculatePrice", (req, res) => {
-
-  console.log(req.body);
   const coverage = Number(req.body.coverage);
   const risk = Number(req.body.risk);
   const price = coverage * risk;
@@ -72,8 +68,6 @@ app.post("/calculatePrice", (req, res) => {
     price: price
   });
 });
-
-
 
 app.listen(9001, () => {
   process.stdout.write("the server is available on http://localhost:9001/\n");
