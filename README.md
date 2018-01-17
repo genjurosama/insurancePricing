@@ -42,6 +42,3 @@ To run both unit and end to end tests run :
 npm test
 ```
 
-### Futur optimisations
-
-Add pagination to the tasks table +lazy loading
